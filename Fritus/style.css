@@ -1,0 +1,829 @@
+/*Reset*/
+*{  
+    margin: 0; 
+    padding: 0; 
+    font-size: 100%; 
+    border: none; 
+    outline: none; 
+    font-weight: 300; 
+    box-sizing: border-box; 
+    font-family: 'Dosis', sans-serif;
+}
+
+body{background-color: #27160a;}
+a{text-decoration: none; cursor: pointer; color: black;}
+ul{list-style: none;}
+img{max-width: 100%;}
+h5{font-weight: 800; font-size: 20px; color: #fff; text-align: center;}
+/*----- Index -----*/
+/*Header*/
+.header{
+    width: 100%;
+    float: left;
+    padding: 1% 1%;
+    background-color: #ffd800;
+}
+.logo{
+    width: 56px; 
+    height: 56px; 
+    float: left; 
+    background: url(img/FritusLogoYellow.png) center center/56px no-repeat;
+    font-size: 0;
+}
+
+.out{
+    margin-top: 3%;
+    width: 35px;
+    height: 35px;
+    float: right;
+}
+
+.logout_button{
+    width: 100%;
+    height: 100%;
+    background: #27160a;
+    color: #ffd800;
+    border-radius: 35px;
+}
+
+/*Request*/
+.request{
+    width: 95%;
+    float: left;
+    margin-top: 2%;
+    margin-left: 2.5%;
+    padding: 2% 2%;
+    background-color: #ffd800;
+    border-radius: 8px 8px 0px 0px;
+}
+.request h2{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.contentRequest{
+    width: 95%;
+    max-height: 150px;
+    float: left;
+    margin-left: 2.5%;
+    padding: 0% 2%;
+    background-color: #ffe346;
+    border-radius: 0px 0px 8px 8px;
+    overflow:auto;
+}
+
+.requestBlock{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    border-bottom: 2px solid #27160a;
+}
+
+.requestBlock h1{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.requestBlock h2{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.requestBlock h3{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/*New Request*/
+.contentNewRequest{
+    width: 95%;
+    max-height: 100%;
+    float: left;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    padding: 0% 2%;
+    background-color: #ffe346;
+    border-radius: 0px 0px 8px 8px;
+}
+.contentNewRequest input{
+    width: 95%;
+    height: 2em;
+    border-radius: 8px;
+    margin-top: 1%;
+    margin-left: 2.5%;
+}
+
+.contentNewRequest input[name="coxinha"]{
+    width: 22%;
+    float: left;
+    margin-left: 2.5%;
+    text-align: center;
+}
+
+.contentNewRequest input[name="luaDeMel"]{
+    width: 22%;
+    float: left;
+    margin-left: 14%;
+    text-align: center;
+}
+
+.contentNewRequest input[name="risole"]{
+    width: 22%;
+    float: left;
+    margin-left: 14%;
+    text-align: center;
+}
+
+.contentNewRequest input[name="submit"]{
+    background: #ffd800;
+    color: #27160a;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.contentNewRequest input[name="submit"]:hover{
+    cursor: pointer;
+    background: #27160a;
+    color: #ffd800;
+}
+
+.contentNewRequest h1{
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 5%;
+    float: left;
+}
+
+.contentNewRequest h2{
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 16%;
+    float: left;
+}
+
+.contentNewRequest h3{
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 18%;
+    float: left;
+}
+
+.contentNewRequest h4{
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 2.5%;
+    float: left;
+}
+
+
+/*----- Index -----*/
+/*-----------------*/
+/*----- Pedido -----*/
+.contentRequestpedido{
+    width: 95%;
+    max-height: 100%;
+    float: left;
+    margin-left: 2.5%;
+    padding: 0% 2%;
+    background-color: #ffe346;
+    border-radius: 0px 0px 8px 8px;
+    overflow:auto;
+}
+
+.contentRequestpedido p{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.contentRequestpedido h1{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn{
+    width: 100%;
+    height: 3em;
+}
+
+.btn input{
+    width: 30%;
+    height: 100%;
+    float: right;
+    margin-right: 2.5%;
+    margin-top: 2.5%;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    background: red;
+}
+
+.btn input:hover{
+    cursor: pointer;
+    background: black;
+    color: #fff;
+}
+
+
+/*----- Pedido -----*/
+/*-----------------*/
+/*----- Request -----*/
+.contentRequestpage{
+    width: 100%;
+    max-height: 100%;
+    float: left;
+    padding: 0% 2%;
+    border-radius: 0px 0px 8px 8px;
+    overflow:auto;
+}
+
+.requestBlockpage{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    border-radius: 0px 0px 8px 8px;
+    background: #ffe346;
+    border-bottom: 2px solid #27160a;
+}
+
+.requestBlockpage h1{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.requestBlockpage h2{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.requestBlockpage h3{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.requestpage{
+    width: 100%;
+    margin-top: 2%;
+    padding: 2% 2%;
+    background-color: #ffd800;
+    border-radius: 8px 8px 0px 0px;
+}
+.requestpage h2{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/*-----------------*/
+/*----- Login -----*/
+.headerLogin{
+    width: 100%;
+    float: left;
+    padding: 1% 1%;
+    background-color: #ffd800;
+}
+.logoLogin{
+    width: 256px; 
+    height: 256px; 
+    float: left;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 12%; 
+    background: url(img/FritusLogoYellow.png) center center/256px no-repeat;
+    font-size: 0;
+}
+
+.loginContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.loginContainer input{
+    width: 95%;
+    height: 3em;
+    margin-top: 2%;
+    margin-left: 2.5%;
+    border-radius: 8px;
+}
+
+.loginContainer input[name="user"]{
+    margin-top: 20%;
+}
+
+.loginContainer input[name="submit"]{
+    font-weight: 800;
+    font-size: 22px;
+    background: #ffd800;
+    color: #27160a;
+}
+
+.loginContainer input[name="submit"]:hover{
+    cursor: pointer;
+    background: #ffe346;
+}
+
+
+/*-----------------*/
+
+/*----- BreakPoint -----*/
+@media screen and (min-width: 360px)
+{
+    .headerLogin{
+        width: 100%;
+        float: left;
+        padding: 1% 1%;
+        background-color: #ffd800;
+    }
+    .logoLogin{
+        width: 256px; 
+        height: 256px; 
+        float: left;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 12%; 
+        background: url(img/FritusLogoYellow.png) center center/256px no-repeat;
+        font-size: 0;
+    }
+    
+    .loginContainer{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .loginContainer input{
+        width: 95%;
+        height: 3em;
+        margin-top: 2%;
+        margin-left: 2.5%;
+        border-radius: 8px;
+    }
+    
+    .loginContainer input[name="user"]{
+        margin-top: 20%;
+    }
+    
+    .loginContainer input[name="submit"]{
+        font-weight: 800;
+        font-size: 22px;
+        background: #ffd800;
+        color: #27160a;
+    }
+
+    .contentNewRequest h1{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 5%;
+        float: left;
+    }
+    
+    .contentNewRequest h2{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 19%;
+        float: left;
+    }
+    
+    .contentNewRequest h3{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 19%;
+        float: left;
+    }
+    
+    .contentNewRequest h4{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 2.5%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 375px)
+{
+
+    .headerLogin{
+        width: 100%;
+        float: left;
+        padding: 1% 1%;
+        background-color: #ffd800;
+    }
+    .logoLogin{
+        width: 256px; 
+        height: 256px; 
+        float: left;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 12%; 
+        background: url(img/FritusLogoYellow.png) center center/256px no-repeat;
+        font-size: 0;
+    }
+    
+    .loginContainer{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .loginContainer input{
+        width: 95%;
+        height: 3em;
+        margin-top: 2%;
+        margin-left: 2.5%;
+        border-radius: 8px;
+    }
+    
+    .loginContainer input[name="user"]{
+        margin-top: 10%;
+    }
+    
+    .loginContainer input[name="submit"]{
+        font-weight: 800;
+        font-size: 22px;
+        background: #ffd800;
+        color: #27160a;
+    }
+
+    .contentNewRequest h1{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 6%;
+        float: left;
+    }
+    
+    .contentNewRequest h2{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 20%;
+        float: left;
+    }
+    
+    .contentNewRequest h3{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 20%;
+        float: left;
+    }
+    
+    .contentNewRequest h4{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 2.5%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 410px)
+{
+
+    .headerLogin{
+        width: 100%;
+        float: left;
+        padding: 1% 1%;
+        background-color: #ffd800;
+    }
+    .logoLogin{
+        width: 256px; 
+        height: 256px; 
+        float: left;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 17%; 
+        background: url(img/FritusLogoYellow.png) center center/256px no-repeat;
+        font-size: 0;
+    }
+    
+    .loginContainer{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .loginContainer input{
+        width: 95%;
+        height: 3em;
+        margin-top: 2%;
+        margin-left: 2.5%;
+        border-radius: 8px;
+    }
+    
+    .loginContainer input[name="user"]{
+        margin-top: 20%;
+    }
+    
+    .loginContainer input[name="submit"]{
+        font-weight: 800;
+        font-size: 22px;
+        background: #ffd800;
+        color: #27160a;
+    }
+
+    .contentNewRequest h1{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 6%;
+        float: left;
+    }
+    
+    .contentNewRequest h2{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 21%;
+        float: left;
+    }
+    
+    .contentNewRequest h3{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 21%;
+        float: left;
+    }
+    
+    .contentNewRequest h4{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 2.5%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+
+    .headerLogin{
+        width: 100%;
+        float: left;
+        padding: 1% 1%;
+        background-color: #ffd800;
+    }
+    .logoLogin{
+        width: 256px; 
+        height: 256px; 
+        float: left;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 33%; 
+        background: url(img/FritusLogoYellow.png) center center/256px no-repeat;
+        font-size: 0;
+    }
+
+    .out{
+        margin-top: 1.5%;
+        width: 35px;
+        height: 35px;
+        float: right;
+    }
+    
+    .logout_button{
+        width: 100%;
+        height: 100%;
+        background: #27160a;
+        color: #ffd800;
+        border-radius: 35px;
+    }
+    
+    .loginContainer{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .loginContainer input{
+        width: 95%;
+        height: 3em;
+        margin-top: 2%;
+        margin-left: 2.5%;
+        border-radius: 8px;
+    }
+    
+    .loginContainer input[name="user"]{
+        margin-top: 5%;
+    }
+    
+    .loginContainer input[name="submit"]{
+        font-weight: 800;
+        font-size: 22px;
+        background: #ffd800;
+        color: #27160a;
+    }
+
+    .contentNewRequest h1{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 10%;
+        float: left;
+    }
+    
+    .contentNewRequest h2{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 27%;
+        float: left;
+    }
+    
+    .contentNewRequest h3{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 29%;
+        float: left;
+    }
+    
+    .contentNewRequest h4{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 2.5%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+
+    .headerLogin{
+        width: 100%;
+        float: left;
+        padding: 1% 1%;
+        background-color: #ffd800;
+    }
+    .logoLogin{
+        width: 256px; 
+        height: 256px; 
+        float: left;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        margin-left: 38%; 
+        background: url(img/FritusLogoYellow.png) center center/256px no-repeat;
+        font-size: 0;
+    }
+    
+    .loginContainer{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .loginContainer input{
+        width: 95%;
+        height: 3em;
+        margin-top: 2%;
+        margin-left: 2.5%;
+        border-radius: 8px;
+    }
+    
+    .loginContainer input[name="user"]{
+        margin-top: 10%;
+    }
+    
+    .loginContainer input[name="submit"]{
+        font-weight: 800;
+        font-size: 22px;
+        background: #ffd800;
+        color: #27160a;
+    }
+
+    .contentNewRequest h1{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 11%;
+        float: left;
+    }
+    
+    .contentNewRequest h2{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 29%;
+        float: left;
+    }
+    
+    .contentNewRequest h3{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 31%;
+        float: left;
+    }
+    
+    .contentNewRequest h4{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 2.5%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 1366px)
+{
+
+    .headerLogin{
+        width: 100%;
+        float: left;
+        padding: 1% 1%;
+        background-color: #ffd800;
+    }
+    .logoLogin{
+        width: 256px; 
+        height: 256px; 
+        float: left;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-left: 38%; 
+        background: url(img/FritusLogoYellow.png) center center/256px no-repeat;
+        font-size: 0;
+    }
+
+    .out{
+        margin-top: 1%;
+        width: 35px;
+        height: 35px;
+        float: right;
+    }
+    
+    .logout_button{
+        width: 100%;
+        height: 100%;
+        background: #27160a;
+        color: #ffd800;
+        border-radius: 35px;
+    }
+    
+    .loginContainer{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .loginContainer input{
+        width: 95%;
+        height: 3em;
+        margin-top: 2%;
+        margin-left: 2.5%;
+        border-radius: 8px;
+    }
+    
+    .loginContainer input[name="user"]{
+        margin-top: 5%;
+    }
+    
+    .loginContainer input[name="submit"]{
+        font-weight: 800;
+        font-size: 22px;
+        background: #ffd800;
+        color: #27160a;
+    }
+
+    .contentNewRequest h1{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 11.5%;
+        float: left;
+    }
+    
+    .contentNewRequest h2{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 31%;
+        float: left;
+    }
+    
+    .contentNewRequest h3{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 31.5%;
+        float: left;
+    }
+    
+    .contentNewRequest h4{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 2.5%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 1440px)
+{
+    .contentNewRequest h1{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 12%;
+        float: left;
+    }
+    
+    .contentNewRequest h2{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 31%;
+        float: left;
+    }
+    
+    .contentNewRequest h3{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 32%;
+        float: left;
+    }
+    
+    .contentNewRequest h4{
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 2.5%;
+        float: left;
+    }
+}

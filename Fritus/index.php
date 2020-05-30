@@ -9,28 +9,28 @@
         header('Location: login.php');
     }
 
-    $requestSelect = mysqli_query($conn, "SELECT name, op1, op2, op3, id, finalValue, DATE_FORMAT(`date`, '%d %M %Y - %T') AS 'date' from request ORDER BY id desc LIMIT 2");
-    $requestOver = mysqli_query($conn, "SELECT name, op1, op2, op3, id, finalValue, DATE_FORMAT(`date`, '%d %M %Y - %T') AS 'date' from finalizados ORDER BY id desc LIMIT 2");
-    $salted1 = mysqli_query($conn,"SELECT value from salted WHERE id='1'");
-    $salted2 = mysqli_query($conn,"SELECT value from salted WHERE id='2'");
-    $salted3 = mysqli_query($conn,"SELECT value from salted WHERE id='3'");
+    $requestSelect = mysqli_query($conn, "SELECT name, id, finalValue, DATE_FORMAT(`date`, '%d %M %Y - %T') AS 'date' from request ORDER BY id desc LIMIT 2");
+    $requestOver = mysqli_query($conn, "SELECT name, id, finalValue, DATE_FORMAT(`date`, '%d %M %Y - %T') AS 'date' from finalizados ORDER BY id desc LIMIT 2");
 
-    $salted1Value = mysqli_fetch_assoc($salted1);
-    $salted1Price = $salted1Value['value'];
-    $salted2Value = mysqli_fetch_assoc($salted2);
-    $salted2Price = $salted2Value['value'];
-    $salted3Value = mysqli_fetch_assoc($salted3);
-    $salted3Price = $salted2Value['value'];
-
+    $saltedQuery = mysqli_query($conn, "SELECT * FROM salted");
+    for($i = 0; $i <= $saltedNames = mysqli_fetch_row($saltedQuery); $i++)
+    {
+        
+        $salted = $saltedNames[1];
+        $saltedName[] = $salted;  
+        $saltedValue = $saltedNames[2];
+        $saltedPrice[] = $saltedValue;
+    }
+    
     if(isset($_POST['submit']))
     {
         $name = $_POST['name'];
         $address = 'Rua '.$_POST['address'];
         $neigh = 'Bairro '.$_POST['neigh'];
         $city = 'Cidade '.$_POST['city'];
-        $op1 =  'Coxinha: '.$_POST['coxinha'].'un';
-        $op2 = 'Lua de Mel: '.$_POST['luaDeMel'].'un';
-        $op3 = 'Pastel: '.$_POST['risole'].'un';
+        $op1 =  $_POST['coxinha'];
+        $op2 = $_POST['luaDeMel'];
+        $op3 = $_POST['risole'];
         $dateTime = $_POST['date'];
         $dateRequest = date("Y-m-d H:i:s");
         $value = $_POST['value'];
@@ -77,33 +77,28 @@
            <?php
                 while ($request = mysqli_fetch_assoc($requestSelect)) 
                 {
+                    $requesrArray = $request['id'];
                     $id = $request['id'];
                     $da = $request['date'];
                     $name = $request['name'];
-                    $op1 = $request['op1'];
-                    $op2 = $request['op2'];
-                    $op3 = $request['op3'];
                     $value = $request['finalValue'];
-
+                    
+                    $nameOp = "op";
+                    $number = 0;
                     echo
-                    '<a href="pedido.php?id='.$id.'"><div class="requestBlock">
-                    <h1>'.$name.'</h1>';
-                    if($op1 != "Coxinha: 0un" && $op1 != null)
+                        '<a href="pedido.php?id='.$id.'"><div class="requestBlock">
+                        <h1>'.$name.'</h1>';
+                    for($i = 1; $i <= sizeof($saltedName); $i++)
                     {
-                        echo
-                        '<h2>'.$op1.'</h2>';
-                    }
-
-                    if($op2 != "Lua de Mel: 0un" && $op1 != null)
-                    {
-                        echo
-                        '<h2>'.$op2.'</h2>';
-                    }
-
-                    if($op3 != "Pastel: 0un" && $op1 != null)
-                    {
-                        echo
-                        '<h2>'.$op3.'</h2>';
+                        $ops = mysqli_query($conn, "SELECT * from request WHERE id = '$id' order by id desc");
+                        $op = mysqli_fetch_assoc($ops);
+                        if($op[$nameOp.$i] != "0" && $op[$nameOp.$i] != null)
+                        {
+                            echo
+                            '<h2>'.$saltedName[$number].''.": ".''.$op[$nameOp.$i].''."un".'</h2>';
+                        }
+                        
+                        $number += 1;
                     }
                     echo'
                     <h3>'.'Data de Entrega: '.''.$da.'</h3>
@@ -150,31 +145,27 @@
                     $id = $requestO['id'];
                     $da = $requestO['date'];
                     $name = $requestO['name'];
-                    $op1 = $requestO['op1'];
-                    $op2 = $requestO['op2'];
-                    $op3 = $requestO['op3'];
                     $value = $requestO['finalValue'];
+
+                    $number0 = 0;
 
                     echo
                     '<a href="pedidofinalizado.php?id='.$id.'"><div class="requestBlock">
                     <h1>'.$name.'</h1>';
-                    if($op1 != "0" && $op1 != null)
+                    
+                    for($i = 1; $i <= sizeof($saltedName); $i++)
                     {
-                        echo
-                        '<h2>'.$op1.'</h2>';
+                        $ops = mysqli_query($conn, "SELECT * from finalizados WHERE id = '$id' order by id desc");
+                        $op = mysqli_fetch_assoc($ops);
+                        if($op[$nameOp.$i] != "0" && $op[$nameOp.$i] != null)
+                        {
+                            echo
+                            '<h2>'.$saltedName[$number0].''.": ".''.$op[$nameOp.$i].''."un".'</h2>';
+                        }
+                        
+                        $number0 += 1;
                     }
 
-                    if($op2 != "0" && $op1 != null)
-                    {
-                        echo
-                        '<h2>'.$op2.'</h2>';
-                    }
-
-                    if($op3 != "0" && $op1 != null)
-                    {
-                        echo
-                        '<h2>'.$op3.'</h2>';
-                    }
                     echo'
                     <h3>'.'Data de Entrega: '.''.$da.'</h3>
                     <h3>'.'R$ '.''.$value.'</h3>
@@ -191,9 +182,9 @@
             var risoleQnt = parseInt(document.getElementById('risole').value);
             var off = parseFloat(document.getElementById('off').value);
 
-            var coxinhaValue = "<?php echo$salted1Price?>";
-            var luaDeMelValue = "<?php echo$salted2Price?>";
-            var risoleValue = "<?php echo$salted3Price?>";
+            var coxinhaValue = "<?php echo$saltedPrice[0]?>";
+            var luaDeMelValue = "<?php echo$saltedPrice[1]?>";
+            var risoleValue = "<?php echo$saltedPrice[2]?>";
 
             var value = (coxinhaQnt * coxinhaValue) + (luaDeMelQnt * luaDeMelValue) + (risoleQnt * risoleValue);
             var valueParse = parseFloat(value.toFixed(2));
